@@ -1,7 +1,6 @@
 #importing necessary libraries
 import cv2 as cv
 import time
-from flask import Flask, render_template, Response
 import geocoder
 import os
 
@@ -19,7 +18,7 @@ model1 = cv.dnn_DetectionModel(net1)
 model1.setInputParams(size=(640, 480), scale=1/255, swapRB=True)
 
 #defining the video source (0 for camera or file name for video)
-cap = cv.VideoCapture("a.mp4") 
+cap = cv.VideoCapture(0) 
 width  = cap.get(3)
 height = cap.get(4)
 result = cv.VideoWriter('result.avi', 
