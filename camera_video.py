@@ -49,7 +49,6 @@ while True:
         x, y, w, h = box
         recarea = w*h
         area = width*height
-        #tespit sartlarini saglayan cukurlara tespit dörtgeni cizilmesi ve fotograf ile koordinat txt dosyasinin kaydedilmesi
         #drawing detection boxes on frame for detected potholes and saving coordinates txt and photo
         if(len(scores)!=0 and scores[0]>=0.7):
             if((recarea/area)<=0.1 and box[1]<600):
